@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ТИШКА — кастомный мерч нового вайба</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="bg-orb bg-orb--cherry"></div>
+    <div class="bg-orb bg-orb--matcha"></div>
+    <div class="noise"></div>
+
+    <header class="header" id="header">
+        <div class="container header__container">
+            <a href="#" class="logo">
+                <span class="logo__dot"></span>
+                tishka
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="#hero" class="nav__link">Главная</a></li>
+                    <li><a href="#vibe-test" class="nav__link">Vibe ID</a></li>
+                    <li><a href="#constructor" class="nav__link">Конструктор</a></li>
+                    <li><a href="#gallery" class="nav__link">Дропы</a></li>
+                    <li><a href="#contact" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+            <button class="burger" aria-label="меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <div class="hero__eyebrow">тишка • cherry × matcha palette</div>
+                    <h1 class="hero__title">Кастомный <span class="accent-cherry">мерч</span> для брендов, команд и создателей <span class="accent-matcha">с характером</span></h1>
+                    <p class="hero__subtitle">Делаем вещи, которые выглядят как модный продукт, <br> а не как сувенир <br> От vibe-концепта до готового принта</p>
+                    <div class="hero__buttons">
+                        <a href="#vibe-test" class="btn btn--primary">Пройти vibe-тест</a>
+                        <a href="#constructor" class="btn btn--secondary">Собрать свой дроп</a>
+                    </div>
+                    <div class="hero__stats">
+                        <div class="stat-card">
+                            <strong>48h</strong>
+                            <span>на первую концепцию</span>
+                        </div>
+                        <div class="stat-card">
+                            <strong>250+</strong>
+                            <span>мерч-дропов собрали</span>
+                        </div>
+                        <div class="stat-card">
+                            <strong>∞</strong>
+                            <span>пространства для кастома</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__visual">
+                    <div class="hero-card hero-card--back"></div>
+                    <div class="hero-card hero-card--front">
+                        <div class="hero-badge">limited drop</div>
+                        <div class="floating-shirt">
+                            <svg width="320" height="340" viewBox="0 0 280 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M70 40 L50 100 L90 130 L90 230 L190 230 L190 130 L230 100 L210 40 L180 20 L140 20 L100 20 L70 40Z" fill="url(#gradient)" stroke="#BAD797" stroke-width="3"/>
+                                <path d="M96 112 C122 90, 160 90, 186 112" stroke="rgba(255,255,255,0.7)" stroke-width="3" stroke-linecap="round"/>
+                                <rect x="105" y="130" width="70" height="70" rx="22" fill="rgba(255,255,255,0.10)" stroke="rgba(255,255,255,0.45)"/>
+                                <path d="M120 167 C130 151, 151 150, 159 166 C164 176, 156 185, 140 196 C124 185, 115 176, 120 167Z" fill="#BAD797"/>
+                                <defs>
+                                    <linearGradient id="gradient" x1="20%" y1="0%" x2="90%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#670626;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#1B1015;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="hero-tags">
+                            <span>streetwear</span>
+                            <span>custom print</span>
+                            <span>brand drops</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="vibe-test" id="vibe-test">
+            <div class="container">
+                <h2 class="section-title">подбери свой <span class="accent-cherry">vibe id</span></h2>
+                <div class="test-card">
+                    <p class="section-kicker">AI-like vibe selector</p>
+                    <h3>Пара кликов — и получаешь направление для своего кастомного мерча</h3>
+                    <div class="quiz">
+                        <div class="quiz-question" id="quiz-question">Какой оттенок должен задавать настроение дропа?</div>
+                        <div class="quiz-options" id="quiz-options">
+                            <button class="quiz-option" data-vibe="cherry">Cherry Core #670626</button>
+                            <button class="quiz-option" data-vibe="matcha">Matcha Flow #BAD797</button>
+                            <button class="quiz-option" data-vibe="lime">Acid Pop #D2DE76</button>
+                            <button class="quiz-option" data-vibe="pink">Soft Hype #FFC3CC</button>
+                            <button class="quiz-option" data-vibe="dark">Night Mode #1B1015</button>
+                        </div>
+                        <button class="btn btn--small btn--primary" id="generate-shirt" disabled>Сгенерировать направление</button>
+                    </div>
+                    <div class="generated-result" id="generatedResult" style="display: none;">
+                        <p>Вот твой стартовый концепт дропа:</p>
+                        <div class="vibe-shirt-preview" id="vibeShirtPreview"></div>
+                        <button class="btn btn--secondary btn--small" id="addToConstructor">Перенести в конструктор</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="constructor" id="constructor">
+            <div class="container">
+                <h2 class="section-title">собери свой <span class="accent-matcha">стиль</span></h2>
+                <div class="constructor__wrapper">
+                    <div class="constructor__canvas">
+                        <div class="shirt-preview" id="shirtPreview">
+                            <div class="shirt-color-layer" id="shirtColorLayer" style="background-color: #670626;"></div>
+                            <div class="shirt-overlay" id="shirtOverlay"></div>
+                            <div class="draggable-items" id="draggableItems"></div>
+                        </div>
+                        <p class="hint">Тяни элементы мышкой и собирай front-print как в реальном мерч-редакторе</p>
+                    </div>
+                    <div class="constructor__controls glass-panel">
+                        <h3>Base color</h3>
+                        <div class="color-picker">
+                            <button class="color-dot" style="background: #670626;" data-color="#670626" title="#670626"></button>
+                            <button class="color-dot" style="background: #BAD797;" data-color="#BAD797" title="#BAD797"></button>
+                            <button class="color-dot" style="background: #D2DE76;" data-color="#D2DE76" title="#D2DE76"></button>
+                            <button class="color-dot" style="background: #FFC3CC;" data-color="#FFC3CC" title="#FFC3CC"></button>
+                            <button class="color-dot" style="background: #1B1015;" data-color="#1B1015" title="#1B1015"></button>
+                            <button class="color-dot" style="background: #EFEAE5;" data-color="#EFEAE5" title="#EFEAE5"></button>
+                            <button class="color-dot" style="background: #8B1E3F;" data-color="#8B1E3F" title="#8B1E3F"></button>
+                            <button class="color-dot" style="background: #7AA77C;" data-color="#7AA77C" title="#7AA77C"></button>
+                        </div>
+                        
+                        <h3>Graphic pack</h3>
+                        <div class="pattern-buttons">
+                            <button class="btn btn--small pattern-btn" data-pattern="heart">❤️ Heart</button>
+                            <button class="btn btn--small pattern-btn" data-pattern="star">✦ Star</button>
+                            <button class="btn btn--small pattern-btn" data-pattern="circle">● Dot</button>
+                            <button class="btn btn--small pattern-btn" data-pattern="square">■ Block</button>
+                            <button class="btn btn--small pattern-btn" data-pattern="triangle">▲ Angle</button>
+                            <button class="btn btn--small pattern-btn" data-pattern="stripe">═ Line</button>
+                            <button class="btn btn--small pattern-btn" data-pattern="dot">• Grain</button>
+                            <button class="btn btn--small pattern-btn" data-pattern="flower">✿ Bloom</button>
+                        </div>
+                        
+                        <h3>Own text</h3>
+                        <input type="text" id="customText" placeholder="введи слоган / @бренд / drop name" class="text-input">
+                        <button class="btn btn--small btn--secondary" id="addTextBtn">Добавить текст</button>
+                        
+                        <div class="constructor__actions">
+                            <button class="btn btn--ghost btn--small" id="resetConstructor">Сбросить</button>
+                            <button class="btn btn--primary btn--small" id="saveDesign">Сохранить концепт</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <h2 class="section-title">референсы <span class="accent-cherry">дропов</span></h2>
+                <div class="gallery__grid">
+                    <div class="gallery__item gallery__item--one"><span>Cherry Club</span></div>
+                    <div class="gallery__item gallery__item--two"><span>Matcha Mood</span></div>
+                    <div class="gallery__item gallery__item--three"><span>Night Shift</span></div>
+                    <div class="gallery__item gallery__item--four"><span>Soft Riot</span></div>
+                    <div class="gallery__item gallery__item--five"><span>Acid Bloom</span></div>
+                    <div class="gallery__item gallery__item--six"><span>Studio Wear</span></div>
+                    <div class="gallery__item gallery__item--seven"><span>Campus Drop</span></div>
+                    <div class="gallery__item gallery__item--eight"><span>Creator Pack</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="contact__box">
+                    <p class="section-kicker">let’s build your merch</p>
+                    <h2 class="section-title">запускаем кастомный мерч <span class="accent-matcha">под ваш бренд</span></h2>
+                    <div class="contact__content">
+                        <p>Собираем дропы для кофеен, креативных студий, ивентов, команд, блогеров и брендов, которым нужен merch с визуальным характером.</p>
+                        <div class="contact__links">
+                            <a href="mailto:hello@tishka.ru" class="contact__link">hello@tishka.ru</a>
+                            <a href="https://t.me/tishka" target="_blank" class="contact__link">Telegram</a>
+                            <a href="https://vk.com/tishka" target="_blank" class="contact__link">VK</a>
+                            <a href="https://instagram.com/tishka" target="_blank" class="contact__link">Instagram</a>
+                        </div>
+                        <div class="social-links">
+                            <span class="brand-message" >Tishka — кастом, который хочется носить.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <p>© Tishka, 2026</p>
+            <p>custom merch / design / drops</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
